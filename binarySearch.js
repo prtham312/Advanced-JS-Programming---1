@@ -14,6 +14,19 @@ function binarySearch(list , ele , start , end){
     else if(ele>list[n])  return binarySearch(list ,ele , n+1 , end)
     }
 }
+
+{
 let list  = [1,2,3,4,5,6,7,8,9];
 let ele = 2;
 console.log(Search(list , ele))
+}
+
+
+{
+    // let array be unsorted
+    let list = [1 , 24 ,44 ,34 ,41 , 98 , 93 , 12 , 14 , 78];
+        list = list.sort((a,b) => a-b)
+    let ele = 24
+    console.log(Search(list , ele))
+    console.log(list)
+}
