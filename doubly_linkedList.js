@@ -135,4 +135,8 @@ ll.insert_end(15);
 ll.insert_position(11,4);
 ll.insert_position(12,6);
 ll.insert_position(13,8);
-
+ll.traverseForward();
+ll.delete(11);
+ll.delete(12);
+ll.delete(13);
+ll.traverseForward();
