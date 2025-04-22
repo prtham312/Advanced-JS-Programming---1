@@ -39,4 +39,35 @@ insert_end(data){
 }
 
 
+//Delete a node in singly CLL
+delete(data){
+    if(!this.head) return false;
+    else if(this.head===data){
+        if(size===1){
+            this.head = null;
+            this.tail = null;
+        }
+        else {
+            this.head = this.head.next;
+            this.tail.next = this.head;
+          }
+          this.size--;
+          return true;
+        }
+        let current = this.head;
+        let prev = null;
+        do {
+          if (current.next.data === data) {
+            if (current.next === this.tail) {
+              this.tail = current;
+            }
+            current.next = current.next.next;
+            this.size--;
+            return true;
+          }
+          current = current.next;
+        } while (current !== this.head);
+        return false; // Node not found
+      }
+
 }
