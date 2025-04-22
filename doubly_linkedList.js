@@ -108,4 +108,17 @@ class doublyLinkedList{
         }
       } 
 
+      search(data) {
+        let current = this.head;
+        let idx = 0;
+        while (current) {
+          if (current.data === data) {
+            return idx;
+          }
+          current = current.next;
+          idx++;
+        }
+        return -1;
+      }
+
 }
