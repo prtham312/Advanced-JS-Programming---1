@@ -122,3 +122,9 @@ class doublyLinkedList{
       }
 
 }
+
+const ll = new doublyLinkedList();
+ll.insert(8);
+ll.insert(9);
+ll.insert(10);
+ll.insert(11);
