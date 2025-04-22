@@ -49,6 +49,18 @@ class linkedList{
         }
     }
 
+
+    //searching a node present in linkedList
+    search(data){
+        if(!this.head) return;
+        let current = this.head;
+        while(current){
+            if(current.data === data) return true;
+            current = current.next;
+        }
+        return false;
+    }
+
 }
 
 
