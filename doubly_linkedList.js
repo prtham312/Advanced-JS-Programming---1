@@ -9,7 +9,21 @@ class doublyLinkedList{
     constructor(){
         this.head = null;
         this.tail = null;
-        this.lenght = 0;
+        this.length = 0;
     }
 
+    insert(data){ //inserting a data in DLL
+        const newNode = new Node(data);
+        if(!this.head){
+            this.head = newNode;
+            this.tail = newNode;
+        }
+        else{
+          newNode.next = this.head;
+          this.head.prev = newNode;
+          this.head = newNode;  
+        }
+        this.length++;
+    }
+    
 }
