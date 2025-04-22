@@ -93,3 +93,6 @@ singlycircularlinkedlist.insert_end(7);
 singlycircularlinkedlist.insert_end(6);
 singlycircularlinkedlist.insert_end(5);
 singlycircularlinkedlist.insert_end(4);
+singlycircularlinkedlist.delete(12);
+singlycircularlinkedlist.delete(8);
+singlycircularlinkedlist.delete(19);
