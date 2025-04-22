@@ -140,3 +140,6 @@ ll.delete(11);
 ll.delete(12);
 ll.delete(13);
 ll.traverseForward();
+console.log(ll.search(15));
+console.log(ll.search(11));
+
