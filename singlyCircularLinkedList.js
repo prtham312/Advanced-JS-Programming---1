@@ -70,4 +70,13 @@ delete(data){
         return false; // Node not found
       }
 
+      traverse() {
+        if (!this.head) return;
+        let current = this.head;
+        do {
+          console.log(current.data);
+          current = current.next;
+        } while (current !== this.head);
+    }
+
 }
