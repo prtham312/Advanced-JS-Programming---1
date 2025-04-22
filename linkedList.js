@@ -26,6 +26,13 @@ class linkedList{
     }
     }
 
+    //Prepend data in linkedList
+    prepend(data){
+        const newNode = new Node(data);
+        newNode.next = this.head;
+        this.head = newNode;
+    }
+
 
 }
 
