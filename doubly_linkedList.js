@@ -92,4 +92,12 @@ class doublyLinkedList{
         return false;
     }
 
+    traverseForward() {  //traverse forward
+        let current = this.head;
+        while (current) {
+          console.log(current.data);
+          current = current.next;
+        }
+      } 
+
 }
