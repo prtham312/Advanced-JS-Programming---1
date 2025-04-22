@@ -86,3 +86,5 @@ ll.append(7);
 ll.append(6);
 ll.append(1);
 ll.append(4);
+ll.prepend(9);
+ll.prepend(8);
