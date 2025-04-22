@@ -92,3 +92,5 @@ ll.print();
 ll.delete(1);
 ll.delete(6);
 ll.print();
+console.log(ll.search(6));
+console.log(ll.search(11));
