@@ -34,6 +34,21 @@ class linkedList{
     }
 
 
+    delete(data){ //first occurence only
+        if(!this.head) return;
+        if(this.head.data===data){
+            this.head = this.head.next;
+            return;
+        }
+        else{
+            let current = this.head;
+            while(current.next && current.next.data !== data){
+                current = current.next;
+            }
+            if(current.next) current.next = current.next.next;
+        }
+    }
+
 }
 
 
