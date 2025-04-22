@@ -24,4 +24,19 @@ insert_start(data){
     this.size++;
 }
 
+insert_end(data){
+    const newNode = node(data);
+    if(!this.head){
+        this.tail = newNode;
+        this.head = newNode;
+        newNode.next = this.head;
+    }else{
+        this.tail.next = newNode;
+        newNode.next = this.head;
+        this.tail = newNode;
+    }
+    size++;
+}
+
+
 }
