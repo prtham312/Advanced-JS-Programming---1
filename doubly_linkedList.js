@@ -12,7 +12,7 @@ class doublyLinkedList{
         this.length = 0;
     }
 
-    insert(data){ //inserting a data in DLL
+    insert(data){ //inserting a data in DLL at starting position
         const newNode = new Node(data);
         if(!this.head){
             this.head = newNode;
@@ -26,4 +26,17 @@ class doublyLinkedList{
         this.length++;
     }
     
+    insert_end(data){
+        const newNode = new Node(data);
+        if(!this.tail){
+            this.head = this.tail = newNode;
+        }
+        else{
+            newNode.prev = this.tail;
+            this.tail.next = newNode;
+            this.tail = newNode 
+        }
+        this.length++;
+    }
+
 }
