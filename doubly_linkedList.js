@@ -12,7 +12,7 @@ class doublyLinkedList{
         this.length = 0;
     }
 
-    insert(data){ //inserting a data in DLL at starting position
+    insert_start(data){ //inserting a data in DLL at starting position
         const newNode = new Node(data);
         if(!this.head){
             this.head = newNode;
@@ -43,7 +43,7 @@ class doublyLinkedList{
         const newNode = new Node(data);
         if(position<0 || position>this.length) return false;
         if(position === 0){
-            this.insert(data);
+            this.insert_start(data);
             return true;
         }
         if(position === this.length){
@@ -93,19 +93,24 @@ class doublyLinkedList{
     }
 
     traverseForward() {  //traverse forward
+        let arr = [];
         let current = this.head;
         while (current) {
-          console.log(current.data);
+          arr.push(current.data);
           current = current.next;
         }
+        return arr.join(' <-> ')
       } 
 
       traverseBackward() {  //traverse backwards
         let current = this.tail;
+        let arr= []
         while (current) {
-          console.log(current.data);
+          arr.push(current.data)
           current = current.prev;
         }
+        
+        return arr.join(' <-> ')
       } 
 
       search(data) {
@@ -124,10 +129,10 @@ class doublyLinkedList{
 }
 
 const ll = new doublyLinkedList();
-ll.insert(8);
-ll.insert(9);
-ll.insert(10);
-ll.insert(11);
+ll.insert_start(8);
+ll.insert_start(9);
+ll.insert_start(10);
+ll.insert_start(11);
 ll.insert_end(12);
 ll.insert_end(13);
 ll.insert_end(14);
@@ -135,11 +140,11 @@ ll.insert_end(15);
 ll.insert_position(11,4);
 ll.insert_position(12,6);
 ll.insert_position(13,8);
-ll.traverseForward();
-ll.delete(11);
-ll.delete(12);
-ll.delete(13);
-ll.traverseForward();
+console.log(ll.traverseForward());
+ll.Delete_node(11);
+ll.Delete_node(12);
+ll.Delete_node(13);
+console.log(ll.traverseForward());
 console.log(ll.search(15));
 console.log(ll.search(11));
 
