@@ -100,4 +100,12 @@ class doublyLinkedList{
         }
       } 
 
+      traverseBackward() {  //traverse backwards
+        let current = this.tail;
+        while (current) {
+          console.log(current.data);
+          current = current.prev;
+        }
+      } 
+
 }
