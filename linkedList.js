@@ -61,6 +61,18 @@ class linkedList{
         return false;
     }
 
+
+    //Display elements in linkedList
+    print(){
+        let current = this.head;
+        let dis = [];
+        while(current){
+            dis.push(current.data);
+            current=current.next;
+        }
+        console.log(dis.join(' -> '))
+    }
+
 }
 
 
