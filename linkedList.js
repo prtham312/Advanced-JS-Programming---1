@@ -88,3 +88,4 @@ ll.append(1);
 ll.append(4);
 ll.prepend(9);
 ll.prepend(8);
+ll.print();
