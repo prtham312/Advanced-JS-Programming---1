@@ -25,7 +25,7 @@ insert_start(data){
 }
 
 insert_end(data){
-    const newNode = node(data);
+    const newNode = new Node(data);
     if(!this.head){
         this.tail = newNode;
         this.head = newNode;
@@ -35,7 +35,7 @@ insert_end(data){
         newNode.next = this.head;
         this.tail = newNode;
     }
-    size++;
+    this.size++;
 }
 
 
@@ -71,12 +71,14 @@ delete(data){
       }
 
       traverse() {
+        let arr = []
         if (!this.head) return;
         let current = this.head;
         do {
-          console.log(current.data);
+          arr.push(current.data)
           current = current.next;
         } while (current !== this.head);
+        return arr.join(' -> ')
     }
 
 }
@@ -96,4 +98,4 @@ singlycircularlinkedlist.insert_end(4);
 singlycircularlinkedlist.delete(12);
 singlycircularlinkedlist.delete(8);
 singlycircularlinkedlist.delete(19);
-singlycircularlinkedlist.traverse();
+console.log(singlycircularlinkedlist.traverse());
