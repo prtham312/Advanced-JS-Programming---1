@@ -80,3 +80,10 @@ delete(data){
     }
 
 }
+
+let singlycircularlinkedlist = new singlyCircularLinkedList();
+singlycircularlinkedlist.insert_start(10);
+singlycircularlinkedlist.insert_start(11);
+singlycircularlinkedlist.insert_start(12);
+singlycircularlinkedlist.insert_start(13);
+singlycircularlinkedlist.insert_start(14);
