@@ -11,4 +11,7 @@ class Queue{
     peek(){
         return console.log(this.items[0])
     }
+    size(){
+        return console.log(this.items.length) 
+    }
 }
