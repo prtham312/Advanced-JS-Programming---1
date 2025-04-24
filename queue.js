@@ -33,3 +33,4 @@ queue.pop();
 queue.print();
 queue.peek();
 queue.size();
+queue.isEmpty();
