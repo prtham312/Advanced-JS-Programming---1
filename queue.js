@@ -14,4 +14,7 @@ class Queue{
     size(){
         return console.log(this.items.length) 
     }
+    isEmpty(){
+        return console.log(this.items.size === 0)
+    }
 }
