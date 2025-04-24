@@ -22,7 +22,7 @@ class Stack{
 }
 
 size(){
-    return this.items.length;
+    return console.log(this.items.length);
 }
 
 }
@@ -36,4 +36,5 @@ stack.push(9);
 stack.pop();
 stack.peek();
 stack.isEmpty();
+stack.size();
 
