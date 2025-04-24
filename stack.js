@@ -13,7 +13,7 @@ class Stack{
  }
 
  peek(){
-    return this.items[this.items.length-1]
+    return console.log(this.items[this.items.length-1])
  }
 
 
@@ -34,4 +34,5 @@ stack.push(1);
 stack.push(8);
 stack.push(9);
 stack.pop();
+stack.peek()
 
