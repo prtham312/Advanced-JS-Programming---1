@@ -33,5 +33,5 @@ stack.push(6);
 stack.push(1);
 stack.push(8);
 stack.push(9);
-
+stack.pop();
 
