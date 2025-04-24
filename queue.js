@@ -8,5 +8,7 @@ class Queue{
     pop(){
         this.items.shift()
     }
-
+    peek(){
+        return console.log(this.items[0])
+    }
 }
