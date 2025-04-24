@@ -44,3 +44,5 @@ ht.set("Diwas" , 108);
 ht.set("Ojasva" , 312);
 console.log(ht.get("Anik"));
 console.log(ht.get("Diwas"));
+ht.remove("Ojasva")
+console.log(ht.get("Ojasva"));
