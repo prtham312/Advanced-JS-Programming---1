@@ -25,3 +25,5 @@ queue.push(2);
 queue.push(3);
 queue.push(4);
 queue.push(5);
+queue.pop();
+queue.pop();
