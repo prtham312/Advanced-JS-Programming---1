@@ -24,6 +24,16 @@ class HashTable{
         return this.table[index];
     }
     
+    remove(key){
+        const index = this._hash(key);
+        if(this.table[index] && this.table.length){
+            this.table[index] = undefined;
+            this.size--;
+            return true;
+        }
+        else return false;
+    }
+
 
 }
 
