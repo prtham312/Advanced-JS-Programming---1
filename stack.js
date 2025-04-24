@@ -25,6 +25,10 @@ size(){
     return console.log(this.items.length);
 }
 
+print(){
+    this.items.forEach(item => console.log(item))
+}
+
 }
 
 let stack = new Stack();
@@ -37,4 +41,4 @@ stack.pop();
 stack.peek();
 stack.isEmpty();
 stack.size();
-
+stack.print()
