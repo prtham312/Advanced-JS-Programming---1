@@ -18,3 +18,10 @@ class Queue{
         return console.log(this.items.size === 0)
     }
 }
+
+let queue = new Queue();
+queue.push(1);
+queue.push(2);
+queue.push(3);
+queue.push(4);
+queue.push(5);
