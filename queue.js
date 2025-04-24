@@ -31,3 +31,4 @@ queue.push(5);
 queue.pop();
 queue.pop();
 queue.print();
+queue.peek();
