@@ -37,3 +37,8 @@ class HashTable{
 
 }
 
+
+const ht = new HashTable();
+ht.set("Anik" , 270);
+ht.set("Diwas" , 108);
+ht.set("Ojasva" , 312)
