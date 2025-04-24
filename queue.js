@@ -17,6 +17,9 @@ class Queue{
     isEmpty(){
         return console.log(this.items.size === 0)
     }
+    print(){
+        this.items.forEach(item => console.log(item))
+    }
 }
 
 let queue = new Queue();
@@ -27,3 +30,4 @@ queue.push(4);
 queue.push(5);
 queue.pop();
 queue.pop();
+queue.print();
