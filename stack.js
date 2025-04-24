@@ -18,7 +18,7 @@ class Stack{
 
 
  isEmpty(){
-    return this.items.length === 0;
+    return console.log(this.items.length === 0);
 }
 
 size(){
@@ -34,5 +34,6 @@ stack.push(1);
 stack.push(8);
 stack.push(9);
 stack.pop();
-stack.peek()
+stack.peek();
+stack.isEmpty();
 
