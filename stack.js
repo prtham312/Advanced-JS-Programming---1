@@ -7,4 +7,9 @@ class Stack{
     this.items.push(data);
  }
 
+ pop(){
+    if(this.items.length === 0) return "Oops Stack Overflowed"
+    this.items.pop();
+ }
+
 }
