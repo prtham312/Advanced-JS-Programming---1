@@ -5,6 +5,8 @@ class Queue{
     push(data){
         this.items.push(data);
     }
-  
+    pop(){
+        this.items.shift()
+    }
 
 }
