@@ -15,7 +15,7 @@ class HashTable{
 
     set(key,value){
         const index = this._hash(key);
-        this.table = [key,value];
+        this.table[index] = [key,value];
         this.size++;
     }
 
@@ -27,7 +27,7 @@ class HashTable{
     remove(key){
         const index = this._hash(key);
         if(this.table[index] && this.table.length){
-            this.table[index] = undefined;
+            this.table[index] = [];
             this.size--;
             return true;
         }
@@ -41,4 +41,6 @@ class HashTable{
 const ht = new HashTable();
 ht.set("Anik" , 270);
 ht.set("Diwas" , 108);
-ht.set("Ojasva" , 312)
+ht.set("Ojasva" , 312);
+console.log(ht.get("Anik"));
+console.log(ht.get("Diwas"));
