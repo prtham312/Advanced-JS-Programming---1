@@ -19,6 +19,10 @@ class HashTable{
         this.size++;
     }
 
+    get(key){
+        const index = this._hash(key);
+        return this.table[index];
+    }
     
 
 }
