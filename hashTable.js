@@ -4,7 +4,6 @@ class HashTable{
         this.size = 0
     }
 
-
     _hash(key){
         let hash = 0;
         for(let i =0 ; i<key.length ; i++){
