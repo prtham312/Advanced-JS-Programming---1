@@ -118,3 +118,18 @@ function inorder_stack(root){
    
 }
 inorder_stack(root)
+
+
+//Postorder
+console.error("PostOrder");
+
+
+function PostOrder(root){
+    if(root === null) return;
+    if(root.left) PostOrder(root.left);
+    if(root.right) PostOrder(root.right);
+
+    console.log(root.value);
+}
+
+PostOrder(root);
