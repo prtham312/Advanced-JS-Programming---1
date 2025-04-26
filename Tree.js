@@ -85,3 +85,13 @@ function Preorder_stack(root){
 }
 
 Preorder_stack(root);
+console.error("Inorder")
+
+function inorder(root){
+    if(root == null ) return;
+    if(root.left) inorder(root.left);
+    console.log(root.value);
+    if(root.right) inorder(root.right)
+}
+
+inorder(root);
