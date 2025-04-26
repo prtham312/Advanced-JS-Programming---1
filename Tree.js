@@ -29,3 +29,23 @@ function bfs(root){
 }
 
 bfs(root);
+
+function bfs_arr(root){
+
+    if(root==null) return;
+
+    const queue = [root] ,ans = [];
+    while(queue.length){
+        let len = queue.length , level = [];
+        for(let i = 0 ; i< len ; i++){
+        const item = queue.shift();
+        level.push(item);
+        if(item.left) queue.push(item.left)
+        if(item.right) queue.push(item.right)
+    }
+ans.push(level)
+}
+return ans;
+}
+
+console.log(bfs_arr(root))
