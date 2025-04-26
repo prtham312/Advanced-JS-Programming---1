@@ -67,6 +67,7 @@ console.log(root.value);
 if(root.left) Preorder(root.left);
 if(root.right) Preorder(root.right);
 }
+console.error("Preorder");
 
 Preorder(root);
 
@@ -84,6 +85,9 @@ function Preorder_stack(root){
     }
 }
 
+console.error("Preorder using stack");
+
+
 Preorder_stack(root);
 console.error("Inorder")
 
@@ -95,3 +99,22 @@ function inorder(root){
 }
 
 inorder(root);
+
+console.error("Inorder using stack");
+
+
+function inorder_stack(root){
+    let curr = root;
+    const stack = [];
+    while(stack.length || curr){
+    while(curr){
+        stack.push(curr);
+        curr = curr.left;
+    }
+    let item = stack.pop();
+    console.log(item.value);
+    curr = item.right;    
+    }
+   
+}
+inorder_stack(root)
