@@ -70,3 +70,18 @@ if(root.right) Preorder(root.right);
 
 Preorder(root);
 
+//Preorder using stack
+
+function Preorder_stack(root){
+    if(root==null) return;
+    let stack = [root];
+    while(stack.length){
+        const item = stack.pop();
+    console.log(item.value);
+    if(item.right) stack.push(item.right);
+    if(item.left) stack.push(item.left);
+
+    }
+}
+
+Preorder_stack(root);
