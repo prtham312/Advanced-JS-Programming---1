@@ -133,3 +133,24 @@ function PostOrder(root){
 }
 
 PostOrder(root);
+
+//Postorder iterative
+function PostOrder_stack(root){
+    if(root === null) return []
+  
+    const tempStack = [root], result = []
+  
+    while(tempStack.length){
+        const last = tempStack.pop()
+  
+        result.push(last.value)
+  
+        if(last.left) tempStack.push(last.left)
+        if(last.right) tempStack.push(last.right)
+      }
+  
+      return result.reverse()
+  }
+
+  console.log(PostOrder_stack(root));
+  
