@@ -22,7 +22,19 @@ class BinaryTree{
         else insertNode(this.root , newNode);
     }
 
-       
+    insertNode(node , newNode){
+        if(node.date > newNode.data){ //left subtree as it's value is less than parent node
+            if(node.left === null) node.left = newNode;
+
+            else this.insertNode(node.left ,  newNode)
+        }
+
+        else{
+            if(node.right === null) node.right = newNode;
+            else this.insertNode(node.right , newNode)
+        }
+
+    }
     
 
     
