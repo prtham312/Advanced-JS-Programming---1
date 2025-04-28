@@ -68,6 +68,24 @@ class Graph{
 
     }
 
+    dfs_graph(start){
+        if(!this.adjList.has(start)) {
+            console.error(`Vertex "${start}" not found`);
+            return;
+        }
+        const visited = new Set();
+        const visit = (v) => {
+            visited.add(v);
+            console.log(v);
+            for(let negh of this.adjList.get(v))
+                if(!visited.has(negh)){
+                    visit(negh);
+                }
+        }
+        visit(start);
+
+    }
+
 }
 
 let gr = new Graph();
@@ -79,5 +97,6 @@ gr.addEdge(4,6);
 gr.addEdge(6,2);
 gr.printGraph()
 gr.bfsGraph(2)
+gr.dfs_graph(2);
 
 
