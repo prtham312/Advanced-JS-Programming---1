@@ -29,4 +29,13 @@ class Graph{
 
 }
 
+let gr = new Graph();
+gr.addVertex(2);
+gr.addVertex(4);
+gr.addVertex(6);
+gr.addEdge(2,4);
+gr.addEdge(4,6);
+gr.addEdge(6,2);
+gr.printGraph()
+
 
