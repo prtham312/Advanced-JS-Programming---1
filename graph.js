@@ -3,6 +3,10 @@ class Graph{
         this.noOfVertices = noOfVertices;
         this.adjList = new Map();
     }
-
+    addVertex(v){
+        this.adjList.set(v , []);
+    }
+    
+    
 
 }
