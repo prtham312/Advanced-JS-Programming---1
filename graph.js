@@ -1,3 +1,19 @@
+class Queue{
+    constructor(){
+        this.items = [];
+    }
+    enqueue(data){
+        this.items.push(data);
+    }
+    dequeue(){
+        return this.items.shift()
+    }
+   
+    isEmpty(){
+        return this.items.length === 0
+    }
+}
+
 class Graph{
     constructor(noOfVertices){
         this.noOfVertices = noOfVertices;
@@ -27,6 +43,31 @@ class Graph{
 
     }
 
+    bfsGraph(start){
+        let visited = [];
+        let q = new Queue();
+        visited[start] = true;
+        q.enqueue(start);
+
+        while(!q.isEmpty()){
+            let getElement = q.dequeue();
+
+            console.log(getElement);
+            let list =  this.adjList.get(getElement);
+
+            for(let i in list){
+                let neighbour = list[i];
+
+                if(!visited[neighbour]){
+                    visited[neighbour] = true;
+                    q.enqueue(neighbour)
+                }
+            }
+
+        }
+
+    }
+
 }
 
 let gr = new Graph();
@@ -37,5 +78,6 @@ gr.addEdge(2,4);
 gr.addEdge(4,6);
 gr.addEdge(6,2);
 gr.printGraph()
+gr.bfsGraph(2)
 
 
