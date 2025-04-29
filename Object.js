@@ -8,3 +8,13 @@ Object.defineProperty(bird , 'live' , {
     enumerable : true
 })
 console.log(bird.live)
+
+
+//optional chaining
+a = {
+    b : function(){
+        return {c : {d : 52}}
+    }
+}
+console.log(a.b().c.d)
+//chaining throughout the objects to get a desired value
