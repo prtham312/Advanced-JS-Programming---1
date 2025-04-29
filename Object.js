@@ -10,7 +10,7 @@ Object.defineProperty(bird , 'live' , {
 console.log(bird.live)
 
 
-//optional chaining
+//Chaining
 a = {
     b : function(){
         return {c : {d : 52}}
@@ -18,3 +18,11 @@ a = {
 }
 console.log(a.b().c.d)
 //chaining throughout the objects to get a desired value
+
+// Optional Chaining
+//if the property or method is not defined 
+// it won't give error instead it will log undefined
+
+myProp = {};
+console.log(myProp.method?.()) //it will log undefined
+console.log(myProp?.a)
