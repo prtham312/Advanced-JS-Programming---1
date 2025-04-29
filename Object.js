@@ -26,3 +26,17 @@ console.log(a.b().c.d)
 myProp = {};
 console.log(myProp.method?.()) //it will log undefined
 console.log(myProp?.a)
+
+/* Using nullish coalescing along with for better handling errors in objects while accessing wrong */
+function User(user){
+    const userName = user?.name??"Name not available at current moment";
+    return userName
+}
+let undef;
+console.log(User(undef))
+console.log(User(3))
+console.log(User()) // In all three Name not Available
+
+console.log(User({
+    name : "Anik"
+}))
