@@ -40,3 +40,16 @@ console.log(User()) // In all three Name not Available
 console.log(User({
     name : "Anik"
 }))
+
+
+//Due to properties it will log the value but own't modify the property
+const myObject = {};
+
+Object.defineProperty(myObject, 'someProperty', {
+  value: 313
+});
+
+console.log(myObject.someProperty = 314); // logs: 314
+
+const descriptor = Object.getOwnPropertyDescriptor(myObject, 'someProperty');
+console.log(descriptor);
