@@ -53,3 +53,26 @@ console.log(myObject.someProperty = 314); // logs: 314
 
 const descriptor = Object.getOwnPropertyDescriptor(myObject, 'someProperty');
 console.log(descriptor);
+
+
+// created an object with { b: 2 } as its prototype:
+const myObject = Object.create({ b: 2 });
+myObject.a = 1;
+
+Object.defineProperty(myObject, 'c', {
+    enumerable: false,
+    value: 3
+});
+
+console.log(myObject.c); // logs: 3
+
+// next for...in loop traverses all of the enumerable properties,
+// including those in the prototype chain.
+// Property c is skipped because it is not enumerable.
+for (let propertyName in myObject) {
+   console.log(propertyName + ": " + myObject[propertyName]);
+}
+
+// of only the enumerable own properties,
+// so not of those in the prototype chain.
+console.log(Object.keys(myObject)); // 
