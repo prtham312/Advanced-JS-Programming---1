@@ -35,6 +35,15 @@ class BinaryTree{
         }
 
     }
+
+remove(data){
+    this.root = this.removeNode( this.root , data);
+}
+removeNode(node , key){
+    if(node === null){
+        return null;
+    }
+}
     
 
     
