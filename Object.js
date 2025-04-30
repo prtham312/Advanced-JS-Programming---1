@@ -114,3 +114,17 @@ const person = {
       
     //   person.name("John Doe"); will give error because it is not a function
 }
+
+
+//Deleting Properties
+
+{
+    const user = {
+        first : "FirstName",
+        last : "LastName"
+    }
+    const user1 = Object.create(user)
+    user1.first = "Anik";
+    user1.age = 22
+    console.log(Object.getPrototypeOf(user1))    
+}
