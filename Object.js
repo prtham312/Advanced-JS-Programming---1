@@ -126,5 +126,8 @@ const person = {
     const user1 = Object.create(user)
     user1.first = "Anik";
     user1.age = 22
-    console.log(Object.getPrototypeOf(user1))    
+    console.log(Object.getPrototypeOf(user1))  
+    // property should have configurable true
+    delete user1.age;
+    console.log(user1.age) //will log undefined here.
 }
