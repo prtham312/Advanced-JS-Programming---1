@@ -54,7 +54,7 @@ console.log(myObject.someProperty = 314); // logs: 314
 const descriptor = Object.getOwnPropertyDescriptor(myObject, 'someProperty');
 console.log(descriptor);
 
-
+{
 // created an object with { b: 2 } as its prototype:
 const myObject = Object.create({ b: 2 });
 myObject.a = 1;
@@ -76,8 +76,8 @@ for (let propertyName in myObject) {
 // of only the enumerable own properties,
 // so not of those in the prototype chain.
 console.log(Object.keys(myObject)); // 
-
-
+}
+{
 const person = {
     firstName: "John",
     lastName: "Doe", 
@@ -90,4 +90,27 @@ const person = {
   person.fullName = "Jane Roe"; 
   console.log(person.fullName); 
   
-  person.fullName();
+  person.fullName;
+}
+
+{
+    const person = {
+        get name() {
+          return this._name;
+        },
+        set name(value) {
+          value = value.trim();
+          if (value === '') { return }  
+          this._name = value;
+        }  
+      }
+      
+      console.log(person.name); 
+      person.name = "Jonathan Dev"; 
+      console.log(person.name); 
+      
+      person.name = " ";  // this will not work after trimming it will be empty string
+      console.log(person.name); 
+      
+    //   person.name("John Doe"); will give error because it is not a function
+}
