@@ -76,3 +76,18 @@ for (let propertyName in myObject) {
 // of only the enumerable own properties,
 // so not of those in the prototype chain.
 console.log(Object.keys(myObject)); // 
+
+
+const person = {
+    firstName: "John",
+    lastName: "Doe", 
+    get fullName() {  
+      return `${this.firstName} ${this.lastName}`;
+    }
+  }
+  console.log(person.fullName); 
+  
+  person.fullName = "Jane Roe"; 
+  console.log(person.fullName); 
+  
+  person.fullName();
